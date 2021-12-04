@@ -3,7 +3,7 @@ import { Typography } from "antd";
 
 const { Title, Paragraph, Text } = Typography;
 
-const Intro: FC = () => {
+const Intro: FC<{}> = () => {
   return (
     <Typography>
       <Title className="main-title">Introduction</Title>

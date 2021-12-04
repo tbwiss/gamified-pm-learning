@@ -25,6 +25,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "publish-now": "craco build && surge ./build --domain su-pm-learning.surge.sh",
     "test": "craco test"
   },
   "eslintConfig": {
