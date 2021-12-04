@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Steps, Button, Badge, Typography, Row } from "antd";
+import { Steps, Button, Badge, Typography, Row, Divider } from "antd";
 import { successModal } from "../modal/SuccessModal";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
@@ -79,6 +79,7 @@ const Stepper: FC = () => {
         </div>
         <div className="steps-content">{steps[current].content}</div>
         <div className="steps-action">
+          <Divider style={{ margin: "0 0 1.5em 0" }} />
           {current !== steps.length - 1 && (
             <Row>
               <Title level={3}>Next: {contentForNext()}</Title>
