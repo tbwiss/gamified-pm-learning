@@ -49,4 +49,5 @@ const Intro: FC<{}> = () => {
     </Typography>
   );
 };
+
 export default Intro;

@@ -58,4 +58,5 @@ const ContentTwo: FC = () => {
     </Typography>
   );
 };
+
 export default ContentTwo;

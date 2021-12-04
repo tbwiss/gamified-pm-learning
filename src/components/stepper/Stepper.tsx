@@ -12,7 +12,7 @@ import { successModal } from "../modal/SuccessModal";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
-import ContentThree from "../../content/ContentThree";
+import KnowledgeCheck from "../../content/KnowledgeCheck";
 import { CheckOutlined, LeftOutlined, RightOutlined } from "@ant-design/icons";
 import "./Stepper.css";
 
@@ -44,7 +44,7 @@ const steps = [
     id: 3,
     points: 300,
     title: "Knowledge Check",
-    content: <ContentThree />,
+    content: <KnowledgeCheck />,
   },
 ];
 
@@ -72,7 +72,7 @@ const Stats: FC<{ points: number }> = ({ points }) => (
       title="Your points: "
       value={points}
       precision={0}
-      valueStyle={{ color: "#3f8600" }}
+      valueStyle={{ color: "#096dd9" }}
       suffix="Pt"
     />
   </div>

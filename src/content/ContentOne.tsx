@@ -36,4 +36,5 @@ const ContentOne: FC = () => {
     </Typography>
   );
 };
+
 export default ContentOne;
