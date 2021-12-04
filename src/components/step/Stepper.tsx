@@ -1,12 +1,14 @@
 import React, { FC } from "react";
-import { Steps, Button } from "antd";
+import { Steps, Button, Badge, Typography, Row } from "antd";
 import { successModal } from "../modal/SuccessModal";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
+import { CheckOutlined } from "@ant-design/icons";
 import "./Stepper.css";
 
 const { Step } = Steps;
+const { Title } = Typography;
 
 const steps = [
   {
@@ -23,6 +25,24 @@ const steps = [
   },
 ];
 
+const TopBar: FC = () => (
+  <>
+    <Badge
+      style={{
+        padding: "0.5em",
+        borderRadius: "10px",
+        backgroundColor: "#52c41a",
+      }}
+      count={
+        <span>
+          <CheckOutlined /> 100 pt
+        </span>
+      }
+      overflowCount={999}
+    />
+  </>
+);
+
 const Stepper: FC = () => {
   const [current, setCurrent] = React.useState(0);
 
@@ -34,31 +54,53 @@ const Stepper: FC = () => {
     setCurrent(current - 1);
   };
 
+  const contentForNext = () => {
+    const next = current + 1;
+    if (next === steps.length) {
+      return "Finish";
+    }
+    return steps[next].title;
+  };
+
   return (
     <div className="steps-wrap">
       <Steps className="steps-base" direction="vertical" current={current}>
-        {steps.map((item) => (
-          <Step key={item.title} title={item.title} />
+        {steps.map((item, idx) => (
+          <Step
+            key={item.title}
+            title={item.title}
+            onClick={() => setCurrent(idx)}
+          />
         ))}
       </Steps>
       <div className="steps-container">
+        <div className="steps-top-bar">
+          <TopBar />
+        </div>
         <div className="steps-content">{steps[current].content}</div>
         <div className="steps-action">
-          {current > 0 && (
-            <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
-              Previous
-            </Button>
+          {current !== steps.length - 1 && (
+            <Row>
+              <Title level={3}>Next: {contentForNext()}</Title>
+            </Row>
           )}
-          {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => next()}>
-              Next
-            </Button>
-          )}
-          {current === steps.length - 1 && (
-            <Button type="primary" onClick={() => successModal()}>
-              Done
-            </Button>
-          )}
+          <Row>
+            {current > 0 && (
+              <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+                Previous
+              </Button>
+            )}
+            {current < steps.length - 1 && (
+              <Button type="primary" onClick={() => next()}>
+                Next
+              </Button>
+            )}
+            {current === steps.length - 1 && (
+              <Button type="primary" onClick={() => successModal()}>
+                Done
+              </Button>
+            )}
+          </Row>
         </div>
       </div>
     </div>

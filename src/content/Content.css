@@ -1,0 +1,13 @@
+.main-title {
+  margin-bottom: 0.05em !important;
+}
+
+.center-cnt {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrap {
+  width: 100%;
+  padding: 0.5em;
+}

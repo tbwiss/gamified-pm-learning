@@ -8,7 +8,9 @@ const { Header, Footer, Content } = Layout;
 const Main: FC = () => (
   <>
     <Layout className="layout">
-      <Header>PM fundamentals</Header>
+      <Header className="header">
+        Discuss Project Management fundamental concepts
+      </Header>
       <Content>
         <Stepper />
       </Content>

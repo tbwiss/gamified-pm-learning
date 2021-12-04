@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { Button } from "antd";
 import Main from "./components/main/Main";
 import "./App.less";
 
