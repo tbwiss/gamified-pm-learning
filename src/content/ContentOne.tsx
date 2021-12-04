@@ -3,12 +3,16 @@ import { Typography } from "antd";
 import ReactPlayer from "react-player";
 import "./Content.css";
 
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 const ContentOne: FC = () => {
   return (
     <Typography>
-      <Title>Usefull Terms</Title>
+      <Title className="main-title">Usefull Terms</Title>
+      <Paragraph>
+        <Text>2 minutes</Text>
+      </Paragraph>
+
       <Paragraph>
         In the process of internal desktop applications development, many
         different design specs and implementations would be involved, which

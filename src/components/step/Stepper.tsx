@@ -4,6 +4,7 @@ import { successModal } from "../modal/SuccessModal";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
+import ContentThree from "../../content/ContentThree";
 import { CheckOutlined } from "@ant-design/icons";
 import "./Stepper.css";
 
@@ -16,12 +17,16 @@ const steps = [
     content: <Intro />,
   },
   {
-    title: "Some content",
+    title: "Important Terms",
     content: <ContentOne />,
   },
   {
-    title: "Finish line",
+    title: "The G Theory",
     content: <ContentTwo />,
+  },
+  {
+    title: "Knowledge Check",
+    content: <ContentThree />,
   },
 ];
 

@@ -11,3 +11,9 @@
   width: 100%;
   padding: 0.5em;
 }
+
+.question {
+  list-style-type: none !important;
+  padding: 0;
+  margin: 0;
+}

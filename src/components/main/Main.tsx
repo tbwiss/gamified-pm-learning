@@ -11,7 +11,7 @@ const Main: FC = () => (
       <Header className="header">
         Discuss Project Management fundamental concepts
       </Header>
-      <Content>
+      <Content className="content">
         <Stepper />
       </Content>
       <Footer>Copyright of content: xxx TM</Footer>

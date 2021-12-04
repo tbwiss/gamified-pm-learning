@@ -8,7 +8,11 @@ const { Title, Paragraph, Text } = Typography;
 const ContentTwo: FC = () => {
   return (
     <Typography>
-      <Title>The Gamification Theory</Title>
+      <Title className="main-title">The Gamification Theory</Title>
+      <Paragraph>
+        <Text>3 minutes</Text>
+      </Paragraph>
+
       <Paragraph>
         In the process of internal desktop applications development, many
         different design specs and implementations would be involved, which
