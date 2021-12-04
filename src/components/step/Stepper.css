@@ -1,0 +1,26 @@
+.steps-wrap {
+  display: flex;
+  flex-direction: row;
+  margin: 7em;
+}
+
+.steps-base {
+  width: 30%;
+}
+
+.steps-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.steps-content {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5em;
+}
+
+.steps-action button {
+  margin-right: 2em !important;
+}
