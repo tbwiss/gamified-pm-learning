@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
-import { Button, Layout } from "antd";
-import { LayoutOutlined } from "@ant-design/icons";
+import { Layout } from "antd";
 import { openRedirectModal } from "../modal/Modals";
 import Stepper from "../stepper/Stepper";
 import Viewer from "../viewer/Viewer";
@@ -16,20 +15,13 @@ const doRedirect = () => {
 };
 
 const Main: FC = () => {
-  const [isStepper, setIsStepper] = useState(true);
+  const [isStepper, setIsStepper] = useState(false);
 
   return (
     <>
       <Layout className="layout">
-        <Header className="header">
+        <Header className="header" onClick={() => setIsStepper(!isStepper)}>
           Discuss Project Management fundamental concepts
-          <Button
-            style={{ marginLeft: "1em" }}
-            type="link"
-            onClick={() => setIsStepper(!isStepper)}
-          >
-            <LayoutOutlined />
-          </Button>
         </Header>
         <Content className="content">
           {isStepper ? (
