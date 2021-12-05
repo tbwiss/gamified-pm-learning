@@ -1,7 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
+import { Button, Typography } from "antd";
 import "./Viewer.css";
 
-const Viewer: FC = () => {
+const { Paragraph, Text } = Typography;
+
+const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
+  onCompleted,
+}) => {
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(900);
 
@@ -20,6 +25,19 @@ const Viewer: FC = () => {
         height={`${height}px`}
         type="application/pdf"
       />
+
+      <Typography>
+        <Paragraph>
+          <Text>
+            Are you done reading? Please press <strong>Continue</strong>
+          </Text>
+        </Paragraph>
+        <Paragraph>
+          <Button size="large" type="primary" onClick={() => onCompleted()}>
+            Continue
+          </Button>
+        </Paragraph>
+      </Typography>
     </div>
   );
 };

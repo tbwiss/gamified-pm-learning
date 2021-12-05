@@ -8,7 +8,11 @@ import {
   Divider,
   Statistic,
 } from "antd";
-import { successModal } from "../modal/SuccessModal";
+import {
+  openCongratsModal,
+  openBadgeModal,
+  openRedirectModal,
+} from "../modal/Modals";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
@@ -78,7 +82,9 @@ const Stats: FC<{ points: number }> = ({ points }) => (
   </div>
 );
 
-const Stepper: FC = () => {
+const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
+  onCompleted,
+}) => {
   const [points, setTotalPoints] = React.useState(100);
   const [current, setCurrent] = React.useState(0);
 
@@ -176,7 +182,20 @@ const Stepper: FC = () => {
               <Button
                 size="large"
                 type="primary"
-                onClick={() => successModal()}
+                // onClick={() => {
+                //   openCongratsModal(() => {
+                //     // Add points
+                //     openBadgeModal(() => {
+                //       // Add badge
+                //       onCompleted()
+                //     });
+                //   });
+                // }}
+                onClick={() => {
+                  openCongratsModal(() => {
+                    // Add points
+                  });
+                }}
               >
                 Done
               </Button>
