@@ -4,7 +4,7 @@ import "./Viewer.css";
 
 const { Paragraph, Text } = Typography;
 
-const testPdfSrc = "http://www.africau.edu/images/default/sample.pdf"
+const testPdfSrc = "http://www.africau.edu/images/default/sample.pdf";
 
 const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,
@@ -12,6 +12,7 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(900);
 
+  // eslint-disable-next-line
   useEffect(() => {
     const tmpWidth = window.innerWidth * 0.9;
     const tmpHeight = window.innerHeight * 0.8;
@@ -32,7 +33,7 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
         src={`${testPdfSrc}#view=fitH`}
         style={{
           height,
-          width
+          width,
         }}
         title="test PDF"
         width="100%"

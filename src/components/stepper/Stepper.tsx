@@ -10,9 +10,11 @@ import {
 } from "antd";
 import {
   openCongratsModal,
-  openBadgeModal,
-  openRedirectModal,
+  // openBadgeModal,
+  // openRedirectModal,
 } from "../modal/Modals";
+import BadgeThumbsUp from "./badge-1360.svg";
+import BadgeLightning from "./badge-1361.svg";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
@@ -70,7 +72,10 @@ const TopBar: FC<{ points: number }> = ({ points }) => (
   </>
 );
 
-const Stats: FC<{ points: number }> = ({ points }) => (
+const Stats: FC<{ points: number; hasExtraBadge: boolean }> = ({
+  points,
+  hasExtraBadge,
+}) => (
   <div className="stats">
     <Statistic
       title="Your points: "
@@ -79,6 +84,16 @@ const Stats: FC<{ points: number }> = ({ points }) => (
       valueStyle={{ color: "#096dd9" }}
       suffix="Pt"
     />
+
+    <div className="badges-wrap">
+      <span className="ant-statistic-title">Badges: </span>
+      <p>
+        <img src={BadgeLightning} alt="Badge 1" width="80px" height="80px" />
+        {hasExtraBadge && (
+          <img src={BadgeThumbsUp} alt="Badge 1" width="80px" height="80px" />
+        )}
+      </p>
+    </div>
   </div>
 );
 
@@ -86,6 +101,7 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,
 }) => {
   const [points, setTotalPoints] = React.useState(100);
+  const [extraBadge, setExtraBadge] = React.useState(false);
   const [current, setCurrent] = React.useState(0);
 
   const next = () => {
@@ -129,7 +145,7 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
             />
           ))}
         </Steps>
-        <Stats points={points} />
+        <Stats points={points} hasExtraBadge={extraBadge} />
       </div>
       <div className="steps-container">
         <div className="steps-nav-bar">
@@ -194,6 +210,7 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
                 onClick={() => {
                   openCongratsModal(() => {
                     // Add points
+                    setExtraBadge(true);
                   });
                 }}
               >

@@ -15,7 +15,7 @@ const doRedirect = () => {
 };
 
 const Main: FC = () => {
-  const [isStepper, setIsStepper] = useState(false);
+  const [isStepper, setIsStepper] = useState(true);
 
   return (
     <>
