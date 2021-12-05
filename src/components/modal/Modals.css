@@ -1,3 +1,46 @@
-.modal-elmt .ant-modal-confirm-btns :not(.ant-btn-primary) {
-  visibility: hidden !important;
+.modal-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-sider {
+  flex: 0.45;
+}
+
+.modal-sider img {
+  display: block;
+  max-width: 230px;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+}
+
+.modal-sider .garland {
+  margin-bottom: -120px;
+  margin-top: -80px;
+}
+
+.modal-sider .quality {
+  margin-bottom: -90px;
+  margin-top: -50px;
+}
+
+.modal-sider .medal {
+  margin-bottom: -150px;
+}
+
+.modal-main {
+  flex: 0.55;
+  padding-left: 2em;
+}
+
+.modal-top-row {
+  height: 50px;
+  text-align: right;
+}
+
+.modal-core {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }

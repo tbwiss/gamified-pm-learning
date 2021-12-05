@@ -8,11 +8,7 @@ import {
   Divider,
   Statistic,
 } from "antd";
-import {
-  openCongratsModal,
-  // openBadgeModal,
-  // openRedirectModal,
-} from "../modal/Modals";
+import { openCongratsModal, openBadgeModal } from "../modal/Modals";
 import BadgeThumbsUp from "../../assets/badge-1360.svg";
 import BadgeLightning from "../../assets/badge-1361.svg";
 import Intro from "../../content/Intro";
@@ -54,7 +50,7 @@ const steps = [
   },
 ];
 
-const TopBar: FC<{ points: number }> = ({ points }) => (
+export const TopBar: FC<{ points: number }> = ({ points }) => (
   <>
     <Badge
       style={{
@@ -88,9 +84,19 @@ const Stats: FC<{ points: number; hasExtraBadge: boolean }> = ({
     <div className="badges-wrap">
       <span className="ant-statistic-title">Badges: </span>
       <p>
-        <img src={BadgeLightning} alt="Badge 1" width="80px" height="80px" />
+        <img
+          src={BadgeLightning}
+          alt="Badge awesome"
+          width="80px"
+          height="80px"
+        />
         {hasExtraBadge && (
-          <img src={BadgeThumbsUp} alt="Badge 1" width="80px" height="80px" />
+          <img
+            src={BadgeThumbsUp}
+            alt="Badge thumbs up"
+            width="80px"
+            height="80px"
+          />
         )}
       </p>
     </div>
@@ -102,6 +108,7 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
 }) => {
   const [points, setTotalPoints] = React.useState(100);
   const [extraBadge, setExtraBadge] = React.useState(false);
+  const [extraPoints, setExtraPoints] = React.useState(false);
   const [current, setCurrent] = React.useState(0);
 
   const next = () => {
@@ -198,19 +205,18 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
               <Button
                 size="large"
                 type="primary"
-                // onClick={() => {
-                //   openCongratsModal(() => {
-                //     // Add points
-                //     openBadgeModal(() => {
-                //       // Add badge
-                //       onCompleted()
-                //     });
-                //   });
-                // }}
+                // TODO: disable until all questions correct
                 onClick={() => {
                   openCongratsModal(() => {
-                    // Add points
-                    setExtraBadge(true);
+                    if (!extraPoints) {
+                      setExtraPoints(true);
+                      setTotalPoints(points + 200);
+                    }
+
+                    openBadgeModal(() => {
+                      setExtraBadge(true);
+                      onCompleted();
+                    });
                   });
                 }}
               >
