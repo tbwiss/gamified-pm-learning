@@ -13,8 +13,8 @@ import {
   // openBadgeModal,
   // openRedirectModal,
 } from "../modal/Modals";
-import BadgeThumbsUp from "./badge-1360.svg";
-import BadgeLightning from "./badge-1361.svg";
+import BadgeThumbsUp from "../../assets/badge-1360.svg";
+import BadgeLightning from "../../assets/badge-1361.svg";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";

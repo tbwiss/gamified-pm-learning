@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Typography } from "antd";
-import stakeholders from "./assets/stakeholders.jpeg";
+import stakeholders from "../assets/stakeholders.jpeg";
 import "./Content.css";
 
 const { Title, Paragraph, Text } = Typography;
