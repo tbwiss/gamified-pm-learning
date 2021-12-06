@@ -1,13 +1,21 @@
 .layout {
-  height: 100%;
   width: 100%;
+  min-height: 100vh !important;
 
   display: flex;
   justify-content: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  .layout {
+    height: unset;
+  }
+}
+
 .content {
-  min-height: 88vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .header {

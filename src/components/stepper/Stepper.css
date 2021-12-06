@@ -58,10 +58,15 @@
     margin-top: 1em;
     max-width: 100%;
   }
+
+  .steps-content {
+    min-width: unset !important;
+  }
 }
 
 .steps-content {
   width: 100%;
+  min-width: 710px;
   text-align: left;
   margin-bottom: 2em;
 }
