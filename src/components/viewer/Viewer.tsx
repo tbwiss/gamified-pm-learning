@@ -4,7 +4,7 @@ import "./Viewer.css";
 
 const { Paragraph, Text } = Typography;
 
-const testPdfSrc = "http://www.africau.edu/images/default/sample.pdf";
+const testPdfSrc = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
 
 const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,
