@@ -22,7 +22,7 @@ const ContentOne: FC = () => {
 
       <Paragraph className="center-cnt">
         <ReactPlayer
-          width="540px"
+          width="100%"
           url="https://www.youtube.com/watch?v=qTQsdJFG4SQ"
         />
       </Paragraph>

@@ -14,7 +14,7 @@ const modals = [
   {
     id: "congrats",
     cancelText: "Close",
-    okText: "Okay!",
+    okText: "Continue",
     width: 600,
     content: (
       <div className="modal-content">
@@ -45,7 +45,7 @@ const modals = [
   {
     id: "badge",
     cancelText: "Close",
-    okText: "Okay!",
+    okText: "Continue",
     width: 600,
     content: (
       <div className="modal-content">
@@ -72,7 +72,7 @@ const modals = [
                 <Text>You get a brand new badge for this.</Text>
               </Paragraph>
               <Paragraph>
-                <Text>Some more filler text here</Text>
+                <Text>Click here to share your achievement</Text>
               </Paragraph>
             </Typography>
           </div>
@@ -83,7 +83,7 @@ const modals = [
   {
     id: "redirectToSurvey",
     cancelText: "Close",
-    okText: "Okay!",
+    okText: "To the survey",
     width: 600,
     content: (
       <div className="modal-content">

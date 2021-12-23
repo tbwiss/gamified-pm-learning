@@ -27,7 +27,14 @@ const KnowledgeCheck: FC = () => {
       </Paragraph>
 
       <Paragraph>
-        Choose the best response for each question. Then select{" "}
+        We have to have a bit of filler text here. nothing useful just some text.
+        different design specs and implementations would be involved, which
+        might cause designers and developers difficulties and duplication and
+        reduce the efficiency of development.
+      </Paragraph>
+
+      <Paragraph>
+        Choose the best response for each question. Then select {" "}
         <strong>Check your answers</strong>.
       </Paragraph>
 
