@@ -49,9 +49,33 @@
   visibility: hidden;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+  .ant-modal-body {
+    padding: 15px 20px !important;
+  }
+
+  .modal-sider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .modal-sider img {
-    max-width: 70%;
+    max-width: 100%;
     max-height: 450px;
+  }
+
+  .modal-sider .garland {
+    margin-bottom: -85px;
+    margin-top: -40px;
+  }
+
+  .modal-sider .quality {
+    margin-bottom: -30px;
+    margin-top: -100px;
+  }
+
+  .modal-sider .medal {
+    margin-top: 0;
   }
 }

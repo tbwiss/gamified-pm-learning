@@ -19,7 +19,11 @@ const modals = [
     content: (
       <div className="modal-content">
         <div className="modal-sider">
-          <img src={Spark} alt="Spark of joy" width="220px" height="350px" />
+          <img
+            src={Spark} alt="Spark of joy"
+            width="220px"
+            height="350px"
+            className="joy" />
         </div>
         <div className="modal-main">
           <div className="modal-top-row">
