@@ -1,14 +1,16 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Layout } from "antd";
 import { openRedirectModal } from "../modal/Modals";
 import Stepper from "../stepper/Stepper";
 import Viewer from "../viewer/Viewer";
 import LandingPage from "../landing/LandingPage";
+import Survey from "../survey/Survey";
 import Spark from "../../assets/celebration-spark.svg";
 import Garland from "../../assets/celebration-garland.svg";
 import Medal from "../../assets/medal-1369.svg";
 import Quality from "../../assets/quality-3602.svg";
 import BadgeThumbsUp from "../../assets/badge-1360.svg";
+import { createUniqueId, getUniqueId } from "../helpers/helpers";
 import "./Main.css";
 
 const { Header, Footer, Content } = Layout;
@@ -24,6 +26,10 @@ const Main: FC = () => {
   const [isStepper, setIsStepper] = useState(true);
   const [isLandingPage, setIsLandingPage] = useState(true);
 
+  useEffect(() => {
+    createUniqueId();
+  }, []);
+
   const doABtestingRedirect = () => {
     setIsLandingPage(false);
     const aOrb = Math.random() >= 0.5;
@@ -38,8 +44,9 @@ const Main: FC = () => {
         </Header>
         <Content className="content">
           {isLandingPage ? (
-            <LandingPage onGo={doABtestingRedirect} />
+            <Survey onCompleted={() => {}} />
           ) : (
+            // <LandingPage onGo={doABtestingRedirect} />
             <>
               {isStepper ? (
                 <Stepper onCompleted={doRedirect} />
@@ -58,7 +65,8 @@ const Main: FC = () => {
           </div>
         </Content>
         <Footer onClick={() => setIsLandingPage(true)}>
-          Copyright of content: xxx TM; Just in case: Link to the survey
+          Copyright of content: xxx TM; Just in case: Link to the survey; Your
+          anonymous survey id: {getUniqueId()}
         </Footer>
       </Layout>
     </>
