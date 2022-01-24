@@ -44,7 +44,7 @@ const Main: FC = () => {
         </Header>
         <Content className="content">
           {isLandingPage ? (
-            <Survey onCompleted={() => {}} />
+            <Survey onCompleted={doABtestingRedirect} />
           ) : (
             // <LandingPage onGo={doABtestingRedirect} />
             <>
