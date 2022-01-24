@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Typography } from "antd";
-import { TopBar } from "../stepper/Stepper";
+import { TopBar } from "../stepper/utils";
 import Spark from "../../assets/celebration-spark.svg";
 import Garland from "../../assets/celebration-garland.svg";
 import BadgeThumbsUp from "../../assets/badge-1360.svg";
@@ -20,10 +20,12 @@ const modals = [
       <div className="modal-content">
         <div className="modal-sider">
           <img
-            src={Spark} alt="Spark of joy"
+            src={Spark}
+            alt="Spark of joy"
             width="220px"
             height="350px"
-            className="joy" />
+            className="joy"
+          />
         </div>
         <div className="modal-main">
           <div className="modal-top-row">

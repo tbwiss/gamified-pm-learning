@@ -1,13 +1,13 @@
 import React, { FC, useEffect, useState } from "react";
 import { Button, Typography } from "antd";
-import { getUniqueId } from "../helpers/helpers";
 import "./Survey.css";
 
 const { Paragraph, Text } = Typography;
 
-const Survey: FC<{ onCompleted: (...args: any[]) => any }> = ({
-  onCompleted,
-}) => {
+const Survey: FC<{
+  isPartOne: boolean;
+  onCompleted: (...args: any[]) => any;
+}> = ({ isPartOne = true, onCompleted }) => {
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(900);
 
@@ -48,17 +48,34 @@ const Survey: FC<{ onCompleted: (...args: any[]) => any }> = ({
       />
 
       <Typography style={{ marginTop: "2em" }}>
-        <Paragraph>
-          <Text>
-            Are you asked to <strong>experience the learning</strong>? Please
-            press the button below.
-          </Text>
-        </Paragraph>
-        <Paragraph>
-          <Button size="large" type="primary" onClick={() => onCompleted()}>
-            Continue to experience
-          </Button>
-        </Paragraph>
+        {isPartOne ? (
+          <React.Fragment>
+            <Paragraph>
+              <Text>
+                Are you asked to <strong>experience the learning</strong>?
+                Please press the button below.
+              </Text>
+            </Paragraph>
+            <Paragraph>
+              <Button size="large" type="primary" onClick={() => onCompleted()}>
+                Continue to experience
+              </Button>
+            </Paragraph>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Paragraph>
+              <Text>
+                Did you finalize the survey by clicking <strong>submit</strong>?
+              </Text>
+              <p>
+                <Text>
+                  Thank you very much! We really appreciate you taking the time!
+                </Text>
+              </p>
+            </Paragraph>
+          </React.Fragment>
+        )}
       </Typography>
     </div>
   );

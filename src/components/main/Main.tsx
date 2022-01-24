@@ -1,6 +1,5 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import { Layout } from "antd";
-import { openRedirectModal } from "../modal/Modals";
 import Stepper from "../stepper/Stepper";
 import Viewer from "../viewer/Viewer";
 import LandingPage from "../landing/LandingPage";
@@ -10,30 +9,53 @@ import Garland from "../../assets/celebration-garland.svg";
 import Medal from "../../assets/medal-1369.svg";
 import Quality from "../../assets/quality-3602.svg";
 import BadgeThumbsUp from "../../assets/badge-1360.svg";
-import { createUniqueId, getUniqueId } from "../helpers/helpers";
 import "./Main.css";
 
 const { Header, Footer, Content } = Layout;
 
-const doRedirect = () => {
-  openRedirectModal(() => {
-    // TODO: Do redirect
-    console.log("Main: Redirect to survey now..");
-  });
-};
-
 const Main: FC = () => {
+  const [pageIdx, setPageIdx] = useState(0);
+  const [contentIdx, setContentIdx] = useState(0);
   const [isStepper, setIsStepper] = useState(true);
-  const [isLandingPage, setIsLandingPage] = useState(true);
 
-  useEffect(() => {
-    createUniqueId();
-  }, []);
+  const checkContentState = () => {
+    if (contentIdx === 1) {
+      // done
+      setPageIdx(pageIdx + 1);
+    }
+    setContentIdx(contentIdx + 1);
+    setIsStepper(!isStepper);
+  };
 
   const doABtestingRedirect = () => {
-    setIsLandingPage(false);
     const aOrb = Math.random() >= 0.5;
     setIsStepper(aOrb);
+    setPageIdx(pageIdx + 1);
+  };
+
+  const renderPage = () => {
+    switch (pageIdx) {
+      case 0:
+        return <LandingPage onGo={() => setPageIdx(pageIdx + 1)} />;
+      case 1:
+        return <Survey isPartOne={true} onCompleted={doABtestingRedirect} />;
+      case 2:
+        return (
+          <>
+            {isStepper ? (
+              <Stepper onCompleted={checkContentState} />
+            ) : (
+              <Viewer onCompleted={checkContentState} />
+            )}
+          </>
+        );
+      case 3:
+        return <Survey isPartOne={false} onCompleted={() => {}} />;
+
+      // TODO: also have a "exit" page??
+      default:
+        break;
+    }
   };
 
   return (
@@ -43,18 +65,7 @@ const Main: FC = () => {
           Discuss Project Management fundamental concepts
         </Header>
         <Content className="content">
-          {isLandingPage ? (
-            <Survey onCompleted={doABtestingRedirect} />
-          ) : (
-            // <LandingPage onGo={doABtestingRedirect} />
-            <>
-              {isStepper ? (
-                <Stepper onCompleted={doRedirect} />
-              ) : (
-                <Viewer onCompleted={doRedirect} />
-              )}
-            </>
-          )}
+          {renderPage()}
           <div style={{ visibility: "hidden" }}>
             {/* Primitive way to load the svg's on page load */}
             <img src={Spark} alt="Spark" width="10px" height="10px" />
@@ -64,9 +75,10 @@ const Main: FC = () => {
             <img src={BadgeThumbsUp} alt="thumbs" width="10px" height="10px" />
           </div>
         </Content>
-        <Footer onClick={() => setIsLandingPage(true)}>
-          Copyright of content: xxx TM; Just in case: Link to the survey; Your
-          anonymous survey id: {getUniqueId()}
+        <Footer className="footer" onClick={() => setPageIdx(0)}>
+          Copyright of content: xxx TM;
+          {/* Is this needed or just confusing?? Probably more confusing then helpful */}
+          {/* Just in case: to the survey page */}
         </Footer>
       </Layout>
     </>

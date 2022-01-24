@@ -31,7 +31,12 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         </Text>
       </Paragraph>
       <Paragraph style={{ textAlign: "center" }}>
-        <Button size="large" type="primary" onClick={onGo}>
+        <Button
+          size="large"
+          type="primary"
+          onClick={onGo}
+          style={{ width: "8em" }}
+        >
           Go!
         </Button>
       </Paragraph>

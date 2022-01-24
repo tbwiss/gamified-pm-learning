@@ -1,13 +1,5 @@
 import React, { FC } from "react";
-import {
-  Steps,
-  Button,
-  Badge,
-  Typography,
-  Row,
-  Divider,
-  Statistic,
-} from "antd";
+import { Steps, Button, Typography, Row, Divider, Statistic } from "antd";
 import { openCongratsModal, openBadgeModal } from "../modal/Modals";
 import BadgeThumbsUp from "../../assets/badge-1360.svg";
 import BadgeLightning from "../../assets/badge-1361.svg";
@@ -15,7 +7,8 @@ import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
 import KnowledgeCheck from "../../content/KnowledgeCheck";
-import { CheckOutlined, LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { TopBar } from "./utils";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import "./Stepper.css";
 
 const visitedSteps = new Set([0]);
@@ -49,24 +42,6 @@ const steps = [
     content: <KnowledgeCheck />,
   },
 ];
-
-export const TopBar: FC<{ points: number }> = ({ points }) => (
-  <>
-    <Badge
-      style={{
-        padding: "0.5em",
-        borderRadius: "10px",
-        backgroundColor: "#52c41a",
-      }}
-      count={
-        <span>
-          <CheckOutlined /> {points} pt
-        </span>
-      }
-      overflowCount={999}
-    />
-  </>
-);
 
 const Stats: FC<{ points: number; hasExtraBadge: boolean }> = ({
   points,
