@@ -116,89 +116,91 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
   };
 
   return (
-    <div className="steps-wrap">
-      <div className="steps-sider">
-        <Steps className="steps-base" direction="vertical" current={current}>
-          {steps.map((item, idx) => (
-            <Step
-              key={item.title}
-              title={item.title}
-              onClick={() => onHandleDirectClick(idx)}
-            />
-          ))}
-        </Steps>
-        <Stats points={points} hasExtraBadge={extraBadge} />
-      </div>
-      <div className="steps-container">
-        <div className="steps-nav-bar">
-          {current > 0 ? (
-            <Button
-              type="link"
-              style={{ margin: "0 8px" }}
-              onClick={() => prev()}
-            >
-              <LeftOutlined /> Previous
-            </Button>
-          ) : (
-            <span></span>
-          )}
-          {current < steps.length - 1 ? (
-            <Button type="link" onClick={() => next()}>
-              Next <RightOutlined />
-            </Button>
-          ) : (
-            <span></span>
-          )}
+    <div className="main-step">
+      <div className="steps-wrap">
+        <div className="steps-sider">
+          <Steps className="steps-base" direction="vertical" current={current}>
+            {steps.map((item, idx) => (
+              <Step
+                key={item.title}
+                title={item.title}
+                onClick={() => onHandleDirectClick(idx)}
+              />
+            ))}
+          </Steps>
+          <Stats points={points} hasExtraBadge={extraBadge} />
         </div>
-        <div className="steps-top-bar">
-          <TopBar points={steps[current].points} />
-        </div>
-        <div className="steps-content">{steps[current].content}</div>
-        <div className="steps-action">
-          <Divider style={{ margin: "0 0 1.5em 0" }} />
-          {current !== steps.length - 1 && (
-            <Row>
-              <Title level={3}>Next: {contentForNext()}</Title>
-            </Row>
-          )}
-          <Row>
-            {current > 0 && (
+        <div className="steps-container">
+          <div className="steps-nav-bar">
+            {current > 0 ? (
               <Button
-                size="large"
+                type="link"
                 style={{ margin: "0 8px" }}
                 onClick={() => prev()}
               >
-                Previous
+                <LeftOutlined /> Previous
               </Button>
+            ) : (
+              <span></span>
             )}
-            {current < steps.length - 1 && (
-              <Button size="large" type="primary" onClick={() => next()}>
-                Next
+            {current < steps.length - 1 ? (
+              <Button type="link" onClick={() => next()}>
+                Next <RightOutlined />
               </Button>
+            ) : (
+              <span></span>
             )}
-            {current === steps.length - 1 && (
-              <Button
-                size="large"
-                type="primary"
-                // TODO: disable until all questions correct
-                onClick={() => {
-                  openCongratsModal(() => {
-                    if (!extraPoints) {
-                      setExtraPoints(true);
-                      setTotalPoints(points + 200);
-                    }
+          </div>
+          <div className="steps-top-bar">
+            <TopBar points={steps[current].points} />
+          </div>
+          <div className="steps-content">{steps[current].content}</div>
+          <div className="steps-action">
+            <Divider style={{ margin: "0 0 1.5em 0" }} />
+            {current !== steps.length - 1 && (
+              <Row>
+                <Title level={3}>Next: {contentForNext()}</Title>
+              </Row>
+            )}
+            <Row>
+              {current > 0 && (
+                <Button
+                  size="large"
+                  style={{ margin: "0 8px" }}
+                  onClick={() => prev()}
+                >
+                  Previous
+                </Button>
+              )}
+              {current < steps.length - 1 && (
+                <Button size="large" type="primary" onClick={() => next()}>
+                  Next
+                </Button>
+              )}
+              {current === steps.length - 1 && (
+                <Button
+                  size="large"
+                  type="primary"
+                  // TODO: disable until all questions correct
+                  onClick={() => {
+                    openCongratsModal(() => {
+                      if (!extraPoints) {
+                        setExtraPoints(true);
+                        setTotalPoints(points + 200);
+                      }
 
-                    openBadgeModal(() => {
-                      setExtraBadge(true);
-                      onCompleted();
+                      openBadgeModal(() => {
+                        setExtraBadge(true);
+                        onCompleted();
+                      });
                     });
-                  });
-                }}
-              >
-                Done
-              </Button>
-            )}
-          </Row>
+                  }}
+                >
+                  Done
+                </Button>
+              )}
+            </Row>
+          </div>
         </div>
       </div>
     </div>

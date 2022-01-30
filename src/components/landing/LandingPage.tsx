@@ -6,41 +6,55 @@ const { Title, Paragraph, Text } = Typography;
 
 const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
   return (
-    <Typography className="landing-page">
-      <Title level={3} className="landing-main-title">
-        Project Management education survey
-      </Title>
-      <Paragraph>
-        <Text>
-          The pre-part plus the survey takes about <i>10 minutes</i> in total to
-          complete.
-        </Text>
-      </Paragraph>
-      <Paragraph>
-        <Text>Some more important info? Keep it short though!</Text>
-      </Paragraph>
-      <Paragraph>
-        <Text>
-          <strong>Thank you very much</strong> for taking the time to fill out
-          this survey!
-        </Text>
-      </Paragraph>
-      <Paragraph>
-        <Text>
-          To get started press the <i>Go</i> button below.
-        </Text>
-      </Paragraph>
-      <Paragraph style={{ textAlign: "center" }}>
-        <Button
-          size="large"
-          type="primary"
-          onClick={onGo}
-          style={{ width: "8em" }}
-        >
-          Go!
-        </Button>
-      </Paragraph>
-    </Typography>
+    <div className="landing-page">
+      <Typography>
+        <Title level={3} className="landing-main-title">
+          Project Management education survey
+        </Title>
+        <Paragraph>
+          <Text>
+            The entire survey takes you about 15-20 minutes to complete.
+            <br />
+            There are three parts to this survey:
+            <ul>
+              <li>Survey Part 1: Background and history</li>
+              <li>Experience the e-learning curriculum</li>
+              <li>Survey Part 2: Experience with the curriculum</li>
+            </ul>
+          </Text>
+        </Paragraph>
+        <Paragraph>
+          <Text>
+            On completion of the survey we will donate 100 SEK to the{" "}
+            <a href="https://www.savethechildren.net/">Save the Children</a>{" "}
+            fund.
+          </Text>
+        </Paragraph>
+        <Paragraph>
+          <Text>
+            <strong>Thank you very much</strong> for taking the time to fill out
+            this survey!
+          </Text>
+        </Paragraph>
+        <br />
+        <br />
+        <Paragraph>
+          <Text>
+            To get started press the <i>Go</i> button.
+          </Text>
+        </Paragraph>
+        <Paragraph style={{ textAlign: "center" }}>
+          <Button
+            size="large"
+            type="primary"
+            onClick={onGo}
+            style={{ width: "9em" }}
+          >
+            Go
+          </Button>
+        </Paragraph>
+      </Typography>
+    </div>
   );
 };
 

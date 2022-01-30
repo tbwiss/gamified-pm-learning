@@ -1,3 +1,9 @@
+.main-step {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .steps-wrap {
   display: flex;
   flex-direction: row;

@@ -1,7 +1,8 @@
 .landing-page {
   text-align: left;
-  margin: 7em;
-  max-width: 1100px !important;
+  margin: 6em;
+  display: flex;
+  justify-content: center;
 }
 
 .landing-main-title {
