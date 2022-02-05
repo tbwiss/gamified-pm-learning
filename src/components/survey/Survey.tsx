@@ -14,7 +14,7 @@ const Survey: FC<{
   // eslint-disable-next-line
   useEffect(() => {
     const tmpWidth = window.innerWidth * 0.95;
-    const tmpHeight = window.innerHeight * 0.85;
+    const tmpHeight = window.innerHeight * 0.9;
     setWidth(tmpWidth > 900 ? 900 : tmpWidth);
     setHeight(tmpHeight > 1000 ? 1100 : tmpHeight);
   });

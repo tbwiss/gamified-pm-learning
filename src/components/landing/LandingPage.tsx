@@ -7,20 +7,26 @@ const { Title, Paragraph, Text } = Typography;
 const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
   return (
     <div className="landing-page">
-      <Typography>
+      <Typography className="landing-page-topo">
         <Title level={3} className="landing-main-title">
-          Project Management education survey
+          Student survey on Project management education
         </Title>
         <Paragraph>
           <Text>
-            The entire survey takes you about 15-20 minutes to complete.
+            The entire survey takes around 15-20 minutes to complete.
             <br />
-            There are three parts to this survey:
-            <ul>
-              <li>Survey Part 1: Background and history</li>
-              <li>Experience the e-learning curriculum</li>
-              <li>Survey Part 2: Experience with the curriculum</li>
-            </ul>
+            You will first have a{" "}
+            <strong>
+              hands-on experience of an excerpt of an e-learning curriculum
+            </strong>{" "}
+            and then asked to report on your experience in a survey form, all on
+            this webpage.
+            <br />
+            The survey responses are all <strong>annonymous</strong> and in
+            compliance with the GDPR rules.
+            <br />
+            More on ethical concerns including confidentiality and voluntary
+            participation?
           </Text>
         </Paragraph>
         <Paragraph>
@@ -33,8 +39,10 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         <Paragraph>
           <Text>
             <strong>Thank you very much</strong> for taking the time to fill out
-            this survey!
+            this survey and to contribute to our Master thesis research!
           </Text>
+          <br />
+          <Text>In case there are any issue, contact us at: (needed?)</Text>
         </Paragraph>
         <br />
         <br />

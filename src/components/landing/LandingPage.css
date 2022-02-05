@@ -9,6 +9,10 @@
   margin-top: 1.5em;
 }
 
+.landing-page-topo {
+  max-width: 700px;
+}
+
 @media only screen and (max-width: 1000px) {
   .landing-page {
     margin: 2em;

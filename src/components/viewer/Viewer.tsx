@@ -18,7 +18,7 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   // eslint-disable-next-line
   useEffect(() => {
     const tmpWidth = window.innerWidth * 0.9;
-    const tmpHeight = window.innerHeight * 0.8;
+    const tmpHeight = window.innerHeight * 0.85;
     setWidth(tmpWidth > 900 ? 900 : tmpWidth);
     setHeight(tmpHeight > 1000 ? 1000 : tmpHeight);
   });

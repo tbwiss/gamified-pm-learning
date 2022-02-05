@@ -36,10 +36,8 @@ const Main: FC = () => {
   const renderPage = () => {
     switch (pageIdx) {
       case 0:
-        return <LandingPage onGo={() => setPageIdx(pageIdx + 1)} />;
+        return <LandingPage onGo={doABtestingRedirect} />;
       case 1:
-        return <Survey isPartOne={true} onCompleted={doABtestingRedirect} />;
-      case 2:
         return (
           <>
             {isStepper ? (
@@ -49,7 +47,7 @@ const Main: FC = () => {
             )}
           </>
         );
-      case 3:
+      case 2:
         return <Survey isPartOne={false} onCompleted={() => {}} />;
 
       // TODO: also have a "exit" page??
@@ -62,7 +60,7 @@ const Main: FC = () => {
     <>
       <Layout className="layout">
         <Header className="header" onClick={() => setIsStepper(!isStepper)}>
-          Discuss Project Management fundamental concepts
+          Project management fundamental concepts
         </Header>
         <Content className="content">
           {renderPage()}
