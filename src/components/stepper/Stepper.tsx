@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { Steps, Button, Typography, Row, Divider, Statistic } from "antd";
 import { openCongratsModal, openBadgeModal } from "../modal/Modals";
-import BadgeThumbsUp from "../../assets/badge-1360.svg";
-import BadgeLightning from "../../assets/badge-1361.svg";
+import BadgeDollar from "../../assets/badge-dollar.svg";
+import BadgeDiamond from "../../assets/badge-diamond.svg";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
@@ -60,15 +60,15 @@ const Stats: FC<{ points: number; hasExtraBadge: boolean }> = ({
       <span className="ant-statistic-title">Badges: </span>
       <p>
         <img
-          src={BadgeLightning}
+          src={BadgeDiamond}
           alt="Badge awesome"
           width="80px"
           height="80px"
         />
         {hasExtraBadge && (
           <img
-            src={BadgeThumbsUp}
-            alt="Badge thumbs up"
+            src={BadgeDollar}
+            alt="Badge donation"
             width="80px"
             height="80px"
           />

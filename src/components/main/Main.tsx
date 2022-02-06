@@ -8,7 +8,7 @@ import Spark from "../../assets/celebration-spark.svg";
 import Garland from "../../assets/celebration-garland.svg";
 import Medal from "../../assets/medal-1369.svg";
 import Quality from "../../assets/quality-3602.svg";
-import BadgeThumbsUp from "../../assets/badge-1360.svg";
+import BadgeDonation from "../../assets/badge-dollar.svg";
 import "./Main.css";
 
 const { Header, Footer, Content } = Layout;
@@ -49,8 +49,6 @@ const Main: FC = () => {
         );
       case 2:
         return <Survey isPartOne={false} onCompleted={() => {}} />;
-
-      // TODO: also have a "exit" page??
       default:
         break;
     }
@@ -70,7 +68,7 @@ const Main: FC = () => {
             <img src={Garland} alt="Garland" width="10px" height="10px" />
             <img src={Medal} alt="Medal" width="10px" height="10px" />
             <img src={Quality} alt="Quality" width="10px" height="10px" />
-            <img src={BadgeThumbsUp} alt="thumbs" width="10px" height="10px" />
+            <img src={BadgeDonation} alt="thumbs" width="10px" height="10px" />
           </div>
         </Content>
         <Footer className="footer" onClick={() => setPageIdx(0)}>

@@ -3,7 +3,7 @@ import { Modal, Typography } from "antd";
 import { TopBar } from "../stepper/utils";
 import Spark from "../../assets/celebration-spark.svg";
 import Garland from "../../assets/celebration-garland.svg";
-import BadgeThumbsUp from "../../assets/badge-1360.svg";
+import BadgeDollar from "../../assets/badge-dollar.svg";
 import Medal from "../../assets/medal-1369.svg";
 import Quality from "../../assets/quality-3602.svg";
 import "./Modals.css";
@@ -64,8 +64,8 @@ const modals = [
             height="350px"
           />
           <img
-            src={BadgeThumbsUp}
-            alt="Badge thumbs up"
+            src={BadgeDollar}
+            alt="Badge donation"
             width="220px"
             height="350px"
           />
@@ -75,7 +75,10 @@ const modals = [
             <Typography>
               <Title level={3}>What an achievement!</Title>
               <Paragraph>
-                <Text>You get a brand new badge for this.</Text>
+                <Text>
+                  This unlocks the donation to the{" "}
+                  <strong>Save the Children</strong> fund. Well done!
+                </Text>
               </Paragraph>
               <Paragraph>
                 <Text>Click here to share your achievement</Text>
