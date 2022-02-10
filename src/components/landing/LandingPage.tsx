@@ -15,15 +15,31 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
           <Text>
             The entire survey takes around 15-20 minutes to complete.
             <br />
-            You will first have a{" "}
-            <strong>
-              hands-on experience of an excerpt of an e-learning curriculum
-            </strong>{" "}
-            and then asked to report on your experience in a survey form, all on
-            this webpage.
             <br />
-            The survey responses are all <strong>annonymous</strong> and in
+            <h5>Structure</h5>
+            On this webpage you will have a{" "}
+            <strong>
+              hands-on experience of an excerpt of an e-learning curriculum.
+            </strong>
+            <br />
+            (1) We will show you a text-based/PDF version of the course content
+            excerpt as well as a gamified version of the content. The order of
+            the versions is chosen at random.
+            <br />
+            (2) You are kindly asked to report on your experience of the two
+            different versions in a <strong>survey</strong> form.
+            <br />
+            This is all done on this webpage.
+            <br />
+            <br />
+            <h5>Information</h5>
+            The survey responses are <strong>annonymous</strong> and in
             compliance with the GDPR rules.
+            <br />
+            The data is handeled confidential and will only be used for the
+            purpose of this thesis work.
+            <br />
+            Participation is on a voluntary basis.
             <br />
             More on ethical concerns including confidentiality and voluntary
             participation?
@@ -31,8 +47,11 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         </Paragraph>
         <Paragraph>
           <Text>
-            On completion of the survey we will donate 100 SEK to the{" "}
-            <a href="https://www.savethechildren.net/">Save the Children</a>{" "}
+            <h5>For the good cause</h5>
+            On completion of each survey we will donate 100 SEK to the{" "}
+            <a href="https://www.savethechildren.net/">
+              Save the Children
+            </a>{" "}
             fund.
           </Text>
         </Paragraph>
