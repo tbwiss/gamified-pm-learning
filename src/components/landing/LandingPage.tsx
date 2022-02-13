@@ -13,26 +13,26 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         </Title>
         <Paragraph>
           <Text>
-            The entire survey takes around 15-20 minutes to complete.
+            The entire survey takes approximately 20 minutes to complete.
             <br />
             <br />
-            <h5>Structure</h5>
+            <h4>Procedure</h4>
             On this webpage you will have a{" "}
             <strong>
               hands-on experience of an excerpt of an e-learning curriculum.
             </strong>
             <br />
-            (1) We will show you a text-based/PDF version of the course content
-            excerpt as well as a gamified version of the content. The order of
-            the versions is chosen at random.
+            (1) We will show you a conventional text-based (PDF) version of the
+            course content excerpt as well as a gamified version of the content.
+            The order of the versions is chosen at random.
             <br />
             (2) You are kindly asked to report on your experience of the two
-            different versions in a <strong>survey</strong> form.
+            different versions in a <strong>questionnaire</strong> form.
             <br />
-            This is all done on this webpage.
+            Note that this is all done on this webpage.
             <br />
             <br />
-            <h5>Information</h5>
+            <h4>Information</h4>
             The survey responses are <strong>annonymous</strong> and in
             compliance with the GDPR rules.
             <br />
@@ -47,21 +47,23 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         </Paragraph>
         <Paragraph>
           <Text>
-            <h5>For the good cause</h5>
+            <h4>For the good cause</h4>
             On completion of each survey we will donate 100 SEK to the{" "}
             <a href="https://www.savethechildren.net/">
               Save the Children
             </a>{" "}
             fund.
+            <br />
+            Shall we still include that?
           </Text>
         </Paragraph>
         <Paragraph>
           <Text>
-            <strong>Thank you very much</strong> for taking the time to fill out
-            this survey and to contribute to our Master thesis research!
+            <strong>Thank you very much</strong> for taking the time and your
+            contribution to our Master thesis research!
           </Text>
           <br />
-          <Text>In case there are any issue, contact us at: (needed?)</Text>
+          <Text>In case there are any issues, contact us at: (needed?)</Text>
         </Paragraph>
         <br />
         <br />

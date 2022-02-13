@@ -66,11 +66,13 @@ const Survey: FC<{
           <React.Fragment>
             <Paragraph>
               <Text>
-                Did you finalize the survey by clicking <strong>submit</strong>?
+                Did you finalize the questionnaire by clicking "
+                <strong>Submit</strong>" at the very end?
               </Text>
               <p>
+                <br />
                 <Text>
-                  Thank you very much! We really appreciate you taking the time!
+                  <strong>Thank you very much!</strong> We really appreciate it!
                 </Text>
               </p>
             </Paragraph>
