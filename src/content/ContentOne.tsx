@@ -8,7 +8,7 @@ const { Title, Paragraph, Text } = Typography;
 const ContentOne: FC = () => {
   return (
     <Typography>
-      <Title className="main-title">Usefull Terms</Title>
+      <Title className="main-title">Useful Terms</Title>
       <Paragraph>
         <Text>2 minutes</Text>
       </Paragraph>

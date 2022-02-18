@@ -49,7 +49,11 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
           <Text>
             <h4>For the good cause</h4>
             On completion of each survey we will donate 100 SEK to the{" "}
-            <a href="https://www.savethechildren.net/">
+            <a
+              href="https://www.savethechildren.net/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Save the Children
             </a>{" "}
             fund.

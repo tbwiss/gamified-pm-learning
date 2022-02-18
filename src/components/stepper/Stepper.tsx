@@ -85,6 +85,16 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
   const [extraBadge, setExtraBadge] = React.useState(false);
   const [extraPoints, setExtraPoints] = React.useState(false);
   const [current, setCurrent] = React.useState(0);
+  const [isKnowledgeCheckDone, setIsKnowledgeCheckDone] = React.useState(false);
+
+  document.addEventListener(
+    "CheckDone",
+    () => {
+      console.log("Konwledge check done, received");
+      setIsKnowledgeCheckDone(true);
+    },
+    false
+  );
 
   const next = () => {
     const next = current + 1;
@@ -181,6 +191,7 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
                 <Button
                   size="large"
                   type="primary"
+                  disabled={!isKnowledgeCheckDone}
                   // TODO: disable until all questions correct
                   onClick={() => {
                     openCongratsModal(() => {

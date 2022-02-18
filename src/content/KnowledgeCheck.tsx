@@ -16,7 +16,8 @@ const rules = (correctValue: number) => [
 
 const KnowledgeCheck: FC = () => {
   const onFinish = () => {
-    console.log("Successful! All questions answered correctly when here");
+    console.log("Successful! All questions answered correctly.");
+    document.dispatchEvent(new Event("CheckDone"));
   };
 
   return (
@@ -27,14 +28,14 @@ const KnowledgeCheck: FC = () => {
       </Paragraph>
 
       <Paragraph>
-        We have to have a bit of filler text here. nothing useful just some text.
-        different design specs and implementations would be involved, which
-        might cause designers and developers difficulties and duplication and
-        reduce the efficiency of development.
+        We have to have a bit of filler text here. nothing useful just some
+        text. different design specs and implementations would be involved,
+        which might cause designers and developers difficulties and duplication
+        and reduce the efficiency of development.
       </Paragraph>
 
       <Paragraph>
-        Choose the best response for each question. Then select {" "}
+        Choose the best response for each question. Then select{" "}
         <strong>Check your answers</strong>.
       </Paragraph>
 

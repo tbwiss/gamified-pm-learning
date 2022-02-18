@@ -5,15 +5,14 @@ import "./Viewer.css";
 
 const { Paragraph, Text } = Typography;
 
-const testPdfSrc =
-  "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
 const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,
 }) => {
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(900);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  const pdfSrc = `${window.location.href}/content.pdf`;
 
   // eslint-disable-next-line
   useEffect(() => {
@@ -42,7 +41,7 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
 
       {innerWidth >= 800 ? (
         <iframe
-          src={`${testPdfSrc}#view=fitH`}
+          src={`${pdfSrc}#view=fitH`}
           style={{
             height,
             width,
