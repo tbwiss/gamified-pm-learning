@@ -57,9 +57,7 @@ const Main: FC = () => {
   return (
     <>
       <Layout className="layout">
-        <Header className="header" onClick={() => setIsStepper(!isStepper)}>
-          Project management fundamental concepts
-        </Header>
+        <Header className="header">Project management survey</Header>
         <Content className="content">
           {renderPage()}
           <div style={{ visibility: "hidden" }}>
@@ -71,7 +69,7 @@ const Main: FC = () => {
             <img src={BadgeDonation} alt="thumbs" width="10px" height="10px" />
           </div>
         </Content>
-        <Footer className="footer" onClick={() => setPageIdx(0)}>
+        <Footer className="footer">
           Copyright of content: xxx TM;
           {/* Is this needed or just confusing?? Probably more confusing then helpful */}
           {/* Just in case: to the survey page */}

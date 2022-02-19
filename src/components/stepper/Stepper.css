@@ -42,7 +42,7 @@
 
 @media only screen and (max-width: 1000px) {
   .steps-wrap {
-    margin: 2em;
+    margin: 1.5em 1em;
     flex-direction: column-reverse;
   }
 
