@@ -5,14 +5,14 @@ import "./Viewer.css";
 
 const { Paragraph, Text } = Typography;
 
+const pdfSrc = "https://tbwiss.github.io/tbwiss/content.pdf";
+
 const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,
 }) => {
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(900);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-
-  const pdfSrc = `${window.location.href}/content.pdf`;
 
   // eslint-disable-next-line
   useEffect(() => {
