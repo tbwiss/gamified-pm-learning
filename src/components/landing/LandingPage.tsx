@@ -29,20 +29,17 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             (2) You are kindly asked to report on your experience of the two
             different versions in a <strong>questionnaire</strong> form.
             <br />
-            Please note that this is all done on this webpage.
+            <i>Please note that this is all done on this webpage.</i>
             <br />
             <br />
             <h4>Information</h4>
-            The survey responses are <strong>annonymous</strong> and in
-            compliance with the GDPR rules.
+            The survey responses are <strong>completely annonymous</strong> and
+            in compliance with the GDPR rules.
             <br />
             The data is handeled confidential and will only be used for the
             purpose of this thesis work.
             <br />
             Participation is on a voluntary basis.
-            <br />
-            More on ethical concerns including confidentiality and voluntary
-            participation?
           </Text>
         </Paragraph>
         <Paragraph>
@@ -61,12 +58,11 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
           </Text>
         </Paragraph>
         <Paragraph>
-          <Text>
-            <strong>Thank you very much</strong> for taking the time and your
-            contribution to our Master thesis research!
-          </Text>
           <br />
-          <Text>In case there are any issues, contact us at: (needed?)</Text>
+          <Text>
+            <strong>Thank you very much</strong> for your contribution to our
+            Master thesis research!
+          </Text>
         </Paragraph>
         <br />
         <br />

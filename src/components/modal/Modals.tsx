@@ -36,12 +36,18 @@ const modals = [
               <Title level={3}>Congratulations!</Title>
               <Paragraph>
                 <Text>
-                  You completed the module <strong>PM Learning course 1</strong>
+                  You completed the module{" "}
+                  <strong>Lean project management</strong>
                 </Text>
               </Paragraph>
               <Paragraph>
-                <Text>Some more filler text here</Text>
+                <Text>
+                  You should now have basic knowledge about the benefits and
+                  background of Lean project management, the lean principles,
+                  the Deming cycle, and six sigma
+                </Text>
               </Paragraph>
+              <br />
             </Typography>
           </div>
         </div>
@@ -81,7 +87,13 @@ const modals = [
                 </Text>
               </Paragraph>
               <Paragraph>
-                <Text>Click here to share your achievement</Text>
+                <Text>
+                  With this achievement you also get the{" "}
+                  <strong>"Fundraiser" badge</strong>. Great!
+                </Text>
+              </Paragraph>
+              <Paragraph>
+                <Text>We will add this badge to your collection.</Text>
               </Paragraph>
             </Typography>
           </div>

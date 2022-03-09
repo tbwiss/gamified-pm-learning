@@ -17,12 +17,12 @@ const Intro: FC<{}> = () => {
       <Paragraph>
         This module is designed to give a short introduction into the topic of
         Lean project management. It has no formal prerequisites, but it is
-        helpful to have some prior knowledge of project management. ​
+        helpful to have some prior knowledge of project management.
       </Paragraph>
       <Paragraph>
         Upon completing this module, you should have basic knowledge about the
         benefits and background of Lean project management, the lean principles,
-        the Deming cycle, and six sigma.​
+        the Deming cycle, and six sigma.
       </Paragraph>
 
       <Title level={2}>Introduction​</Title>
