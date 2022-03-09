@@ -70,7 +70,7 @@ const Main: FC = () => {
           </div>
         </Content>
         <Footer className="footer">
-          Copyright of content: xxx TM;
+          {/* Copyright of content: xxx TM; */}
           {/* Is this needed or just confusing?? Probably more confusing then helpful */}
           {/* Just in case: to the survey page */}
         </Footer>

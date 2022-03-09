@@ -29,7 +29,7 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             (2) You are kindly asked to report on your experience of the two
             different versions in a <strong>questionnaire</strong> form.
             <br />
-            Note that this is all done on this webpage.
+            Please note that this is all done on this webpage.
             <br />
             <br />
             <h4>Information</h4>
@@ -48,7 +48,7 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
         <Paragraph>
           <Text>
             <h4>For the good cause</h4>
-            On completion of each survey we will donate 100 SEK to the{" "}
+            We will donate to the{" "}
             <a
               href="https://www.savethechildren.net/"
               target="_blank"
@@ -56,9 +56,8 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             >
               Save the Children
             </a>{" "}
-            fund.
+            fund on your behalf on completion of the survey.
             <br />
-            Shall we still include that?
           </Text>
         </Paragraph>
         <Paragraph>

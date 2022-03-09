@@ -5,7 +5,7 @@ import "./Viewer.css";
 
 const { Paragraph, Text } = Typography;
 
-const pdfSrc = "https://tbwiss.github.io/tbwiss/content.pdf";
+const pdfSrc = "https://tbwiss.github.io/tbwiss/Lean_PM_Revised_v1.pdf";
 
 const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
   onCompleted,

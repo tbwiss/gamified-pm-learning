@@ -7,9 +7,33 @@
   justify-content: center;
 }
 
+.image-container {
+  text-align: center;
+}
+
+.image-wrap-slim {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
 .image-wrap {
   width: 100%;
+  max-width: 450px;
   padding: 0.5em;
+  border-radius: 15px;
+}
+
+.image-wrap-large {
+  width: 100%;
+  max-width: 650px;
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+.src-tag {
+  font-size: 9px;
 }
 
 .ant-form-item-explain-error {

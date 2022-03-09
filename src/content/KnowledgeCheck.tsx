@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Typography, Radio, Space, Form, Button } from "antd";
 import "./Content.css";
 
-const { Title, Paragraph, Text } = Typography;
+const { Title, Paragraph } = Typography;
 
 const rules = (correctValue: number) => [
   {
@@ -23,20 +23,11 @@ const KnowledgeCheck: FC = () => {
   return (
     <Typography>
       <Title className="main-title">Knowledge Check</Title>
-      <Paragraph>
-        <Text>2 minutes</Text>
-      </Paragraph>
 
       <Paragraph>
-        We have to have a bit of filler text here. nothing useful just some
-        text. different design specs and implementations would be involved,
-        which might cause designers and developers difficulties and duplication
-        and reduce the efficiency of development.
-      </Paragraph>
-
-      <Paragraph>
-        Choose the best response for each question. Then select{" "}
-        <strong>Check your answers</strong>.
+        Choose the best response for each of the questions listed below. When
+        you're done, please click on the <strong>Check your answers</strong>{" "}
+        button.
       </Paragraph>
 
       <Form
@@ -49,39 +40,45 @@ const KnowledgeCheck: FC = () => {
         }}
       >
         <Paragraph>
-          <p>1. What is the color?</p>
-          <Form.Item name="q1" rules={rules(1)}>
+          <p>1. What does PDCA stand for?​</p>
+          <Form.Item name="q1" rules={rules(3)}>
             <Radio.Group>
               <Space direction="vertical">
-                <Radio value={1}>Option A</Radio>
-                <Radio value={2}>Option B</Radio>
-                <Radio value={3}>Option C</Radio>
+                <Radio value={1}>
+                  Process, development, continuous improvement, awareness​
+                </Radio>
+                <Radio value={2}>
+                  Planning, developing, challenging, addressing​
+                </Radio>
+                <Radio value={3}>Plan, do, check, act​</Radio>
               </Space>
             </Radio.Group>
           </Form.Item>
         </Paragraph>
 
         <Paragraph>
-          <p>2. What is the term of currenvy?</p>
+          <p>2. What is meant by Muri?​</p>
           <Form.Item name="q2" rules={rules(1)}>
             <Radio.Group>
               <Space direction="vertical">
-                <Radio value={1}>Option A</Radio>
-                <Radio value={2}>Option B</Radio>
-                <Radio value={3}>Option C</Radio>
+                <Radio value={1}>Waste created by overburden</Radio>
+                <Radio value={2}>
+                  Value defined by the customer needs for a product
+                </Radio>
+                <Radio value={3}>Perfection</Radio>
               </Space>
             </Radio.Group>
           </Form.Item>
         </Paragraph>
 
         <Paragraph>
-          <p>3. Select the answer that fits best:</p>
-          <Form.Item name="q3" rules={rules(1)}>
+          <p>3. What is the main philosophy of Lean?​</p>
+          <Form.Item name="q3" rules={rules(2)}>
             <Radio.Group>
               <Space direction="vertical">
-                <Radio value={1}>Option A</Radio>
-                <Radio value={2}>Option B</Radio>
-                <Radio value={3}>Option C</Radio>
+                <Radio value={1}>Deliver in iterations​</Radio>
+                <Radio value={2}>Eliminate waste​</Radio>
+                <Radio value={3}>Plan ahead</Radio>
               </Space>
             </Radio.Group>
           </Form.Item>

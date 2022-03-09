@@ -6,6 +6,8 @@ import BadgeDiamond from "../../assets/badge-diamond.svg";
 import Intro from "../../content/Intro";
 import ContentOne from "../../content/ContentOne";
 import ContentTwo from "../../content/ContentTwo";
+import ContentThree from "../../content/ContentThree";
+import ContentFour from "../../content/ContentFour";
 import KnowledgeCheck from "../../content/KnowledgeCheck";
 import { TopBar } from "./utils";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -26,14 +28,26 @@ const steps = [
   {
     id: 1,
     points: 200,
-    title: "Important Terms",
+    title: "Background and Definition",
     content: <ContentOne />,
   },
   {
     id: 2,
-    points: 100,
-    title: "The G Theory",
+    points: 300,
+    title: "The Lean principles",
     content: <ContentTwo />,
+  },
+  {
+    id: 3,
+    points: 300,
+    title: "Management tools​",
+    content: <ContentThree />,
+  },
+  {
+    id: 3,
+    points: 100,
+    title: "Summary",
+    content: <ContentFour />,
   },
   {
     id: 3,
