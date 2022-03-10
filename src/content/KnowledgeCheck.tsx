@@ -27,9 +27,9 @@ const KnowledgeCheck: FC = () => {
       <Title className="main-title">Knowledge Check</Title>
 
       <Paragraph>
-        Choose the best response for each of the questions listed below. When
-        you're done, please click on the <strong>Check your answers</strong>{" "}
-        button.
+        Choose the best response for each of the questions listed below. Verify
+        your responses with the <strong>Check your answers</strong> button. Once
+        all questions are correctly answered, click <i>Done</i> to continue.
       </Paragraph>
 
       <Form

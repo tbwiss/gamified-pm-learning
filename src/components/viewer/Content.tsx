@@ -295,9 +295,6 @@ const Content: FC = () => (
 
     <Title className="main-title">Summary</Title>
     <Paragraph>
-      <Text>1 minute</Text>
-    </Paragraph>
-    <Paragraph>
       Through adhering to Lean project management ideas (and its management
       tools), you can achieve the following:
     </Paragraph>
