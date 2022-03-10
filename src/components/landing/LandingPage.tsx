@@ -20,11 +20,18 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             <h4>Procedure</h4>
             On this webpage you will have a{" "}
             <strong>
-              hands-on experience of an excerpt of an e-learning curriculum.
+              hands-on experience of a single module of an e-learning
+              curriculum.
             </strong>
             <br />
-            (1) We will show you a conventional text-based (PDF) version of the
-            course content excerpt as well as a gamified version of the content.
+            (1) We will show you:
+            <ul style={{ margin: 0 }}>
+              <li>
+                a conventional text-based (PDF) version of the module's content,
+                and
+              </li>
+              <li>a gamified version of the same module</li>
+            </ul>
             The order of the versions is chosen at random.
             <br />
             (2) You are kindly asked to report on your experience of the two
