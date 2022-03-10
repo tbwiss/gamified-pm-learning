@@ -37,14 +37,14 @@ const modals = [
               <Paragraph>
                 <Text>
                   You completed the module{" "}
-                  <strong>Lean project management</strong>
+                  <strong>Lean project management</strong>.
                 </Text>
               </Paragraph>
               <Paragraph>
                 <Text>
                   You should now have basic knowledge about the benefits and
                   background of Lean project management, the lean principles,
-                  the Deming cycle, and six sigma
+                  the Deming cycle, and six sigma.
                 </Text>
               </Paragraph>
               <br />

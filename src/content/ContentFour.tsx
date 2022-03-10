@@ -16,13 +16,13 @@ const ContentTwo: FC = () => {
         Through adhering to Lean project management ideas (and its management
         tools), you can achieve the following:
       </Paragraph>
-      ​{/* TODO: this is a list */}
+      {/* TODO: this is a list */}
       {/* <Paragraph>
         Shorter lead times Cost reduction across the board Improved quality and
         customer satisfaction Better process efficiency and predictability
       </Paragraph> */}
       <Paragraph className="image-container">
-        <img className="image-wrap-slim" src={summary} alt="Summary​​" />
+        <img className="image-wrap-slim" src={summary} alt="Summary​" />
       </Paragraph>
     </Typography>
   );

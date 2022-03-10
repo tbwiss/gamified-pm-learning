@@ -40,24 +40,24 @@ const KnowledgeCheck: FC = () => {
         }}
       >
         <Paragraph>
-          <p>1. What does PDCA stand for?​</p>
+          <p>1. What does PDCA stand for?</p>
           <Form.Item name="q1" rules={rules(3)}>
             <Radio.Group>
               <Space direction="vertical">
                 <Radio value={1}>
-                  Process, development, continuous improvement, awareness​
+                  Process, development, continuous improvement, awareness
                 </Radio>
                 <Radio value={2}>
-                  Planning, developing, challenging, addressing​
+                  Planning, developing, challenging, addressing
                 </Radio>
-                <Radio value={3}>Plan, do, check, act​</Radio>
+                <Radio value={3}>Plan, do, check, act</Radio>
               </Space>
             </Radio.Group>
           </Form.Item>
         </Paragraph>
 
         <Paragraph>
-          <p>2. What is meant by Muri?​</p>
+          <p>2. What is meant by Muri?</p>
           <Form.Item name="q2" rules={rules(1)}>
             <Radio.Group>
               <Space direction="vertical">
@@ -72,12 +72,12 @@ const KnowledgeCheck: FC = () => {
         </Paragraph>
 
         <Paragraph>
-          <p>3. What is the main philosophy of Lean?​</p>
+          <p>3. What is the main philosophy of Lean?</p>
           <Form.Item name="q3" rules={rules(2)}>
             <Radio.Group>
               <Space direction="vertical">
-                <Radio value={1}>Deliver in iterations​</Radio>
-                <Radio value={2}>Eliminate waste​</Radio>
+                <Radio value={1}>Deliver in iterations</Radio>
+                <Radio value={2}>Eliminate waste</Radio>
                 <Radio value={3}>Plan ahead</Radio>
               </Space>
             </Radio.Group>

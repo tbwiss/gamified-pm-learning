@@ -12,7 +12,7 @@ const Intro: FC<{}> = () => {
         <Text>2 minutes</Text>
       </Paragraph>
 
-      <Title level={2}>What this course is about​</Title>
+      <Title level={2}>What this course is about</Title>
 
       <Paragraph>
         This module is designed to give a short introduction into the topic of
@@ -25,28 +25,27 @@ const Intro: FC<{}> = () => {
         the Deming cycle, and six sigma.
       </Paragraph>
 
-      <Title level={2}>Introduction​</Title>
+      <Title level={2}>Introduction</Title>
       <Paragraph>
         Lean project management focuses on delivering a manufacturing project
         with more value and less waste. It does this by systematically
-        eliminating waste in the value stream of the lean manufacturing
-        process.​
+        eliminating waste in the value stream of the lean manufacturing process.
       </Paragraph>
       <Paragraph>
         To work, lean project management relies on continuous improvement. That
         means that every process in the overall business value stream is
-        improved by applying the principle of greater value, reduced waste.​
+        improved by applying the principle of greater value, reduced waste.
       </Paragraph>
       <Paragraph>
         Lean manufacturing was developed by Toyota, which is why it uses
         Japanese words to refer to the elimination of waste in a manufacturing
         system (Muda), waste created by overburden (Muri) and waste that comes
-        about because of uneven workloads (Mura).​
+        about because of uneven workloads (Mura).
       </Paragraph>
       <Paragraph>
         The lean manufacturing methodology has 5 lean principles: value, value
         stream, pull system, continuous flow, and perfection. We'll learn about
-        those in this module.​
+        those in this module.
       </Paragraph>
       <span className="src-tag">
         Source: https://www.projectmanager.com/blog/lean-project-management
