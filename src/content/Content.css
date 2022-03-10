@@ -36,6 +36,6 @@
   font-size: 9px;
 }
 
-.ant-form-item-explain-error {
-  color: green !important;
+.correct-tag {
+  color: green;
 }

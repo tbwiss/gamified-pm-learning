@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Typography, Radio, Space, Form, Button } from "antd";
 import "./Content.css";
 
@@ -15,7 +15,9 @@ const rules = (correctValue: number) => [
 ];
 
 const KnowledgeCheck: FC = () => {
+  const [errorFields, setErrorFields] = useState<any>(["q1", "q2", "q3"]);
   const onFinish = () => {
+    setErrorFields([]);
     console.log("Successful! All questions answered correctly.");
     document.dispatchEvent(new Event("CheckDone"));
   };
@@ -33,6 +35,12 @@ const KnowledgeCheck: FC = () => {
       <Form
         name="knowledge-check"
         onFinish={onFinish}
+        onFinishFailed={({ values, errorFields, outOfDate }) => {
+          if (errorFields) {
+            const next = errorFields.map((f) => f.name).flat();
+            setErrorFields(next);
+          }
+        }}
         initialValues={{
           q1: null,
           q2: null,
@@ -54,6 +62,9 @@ const KnowledgeCheck: FC = () => {
               </Space>
             </Radio.Group>
           </Form.Item>
+          {!errorFields.includes("q1") ? (
+            <span className="correct-tag">Correct! &#10003;</span>
+          ) : null}
         </Paragraph>
 
         <Paragraph>
@@ -69,6 +80,9 @@ const KnowledgeCheck: FC = () => {
               </Space>
             </Radio.Group>
           </Form.Item>
+          {!errorFields.includes("q2") ? (
+            <span className="correct-tag">Correct! &#10003;</span>
+          ) : null}
         </Paragraph>
 
         <Paragraph>
@@ -82,6 +96,9 @@ const KnowledgeCheck: FC = () => {
               </Space>
             </Radio.Group>
           </Form.Item>
+          {!errorFields.includes("q3") ? (
+            <span className="correct-tag">Correct! &#10003;</span>
+          ) : null}
         </Paragraph>
 
         <Button type="primary" htmlType="submit">

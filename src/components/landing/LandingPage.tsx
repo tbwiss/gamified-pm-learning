@@ -16,6 +16,7 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             The entire survey takes approximately 20 minutes to complete.
             <br />
             <br />
+            <hr />
             <h4>Procedure</h4>
             On this webpage you will have a{" "}
             <strong>
@@ -65,10 +66,19 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
           </Text>
         </Paragraph>
         <br />
-        <br />
         <Paragraph>
+          <hr />
+
           <Text>
-            To get started press the <i>Go</i> button.
+            <h5>Consent</h5>
+            By continuing you agree that your answers to the survey questions
+            will be used for research at Stockholm University. You will remain
+            anonymous and the data will not be used for other purposes.
+          </Text>
+          <br />
+          <br />
+          <Text>
+            To continue and get started, please press the <i>Go</i> button.
           </Text>
         </Paragraph>
         <Paragraph style={{ textAlign: "center" }}>
