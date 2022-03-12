@@ -341,6 +341,9 @@ const Content: FC = () => (
         <li>Plan ahead</li>
       </ul>
     </Paragraph>
+
+    <br />
+    <hr />
   </Typography>
 );
 

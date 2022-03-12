@@ -141,6 +141,10 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
 
   return (
     <div className="main-step">
+      <div className="module-indicator-wrap-steps">
+        <div className="module-indicator">This is the gamified version</div>
+      </div>
+
       <div className="steps-wrap">
         <div className="steps-sider">
           <Steps className="steps-base" direction="vertical" current={current}>
@@ -177,7 +181,8 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
           </div>
           <div className="steps-top-bar">
             <TopBar points={steps[current].points} />
-          </div>
+          </div>{" "}
+          <div className="module-indicator-wrap"></div>
           <div className="steps-content">{steps[current].content}</div>
           <div className="steps-action">
             <Divider style={{ margin: "0 0 1.5em 0" }} />

@@ -39,6 +39,14 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
         type="application/pdf"
       /> */}
 
+      <div className="module-indicator-wrap">
+        <div className="module-indicator">
+          This is the conventional (text-based/PDF) version
+        </div>
+      </div>
+
+      <br />
+
       {innerWidth >= 800 ? (
         <iframe
           src={`${pdfSrc}#view=fitH`}

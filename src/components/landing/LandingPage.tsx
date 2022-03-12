@@ -27,17 +27,21 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             (1) We will show you:
             <ul style={{ margin: 0 }}>
               <li>
-                a conventional text-based (PDF) version of the module's content,
-                and
+                a <i>conventional text-based (PDF) version</i> of the module's
+                content, and
               </li>
-              <li>a gamified version of the same module</li>
+              <li>
+                a <i>gamified version</i> of the same module
+              </li>
             </ul>
             The order of the versions is chosen at random.
             <br />
             (2) You are kindly asked to report on your experience of the two
             different versions in a <strong>questionnaire</strong> form.
             <br />
-            <i>Please note that this is all done on this webpage.</i>
+            <strong>
+              &#x2192; Please note that this is all done on this webpage.
+            </strong>
             <br />
             <br />
             <h4>Information</h4>

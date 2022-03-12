@@ -12,3 +12,20 @@
 .viewer-v-space {
   margin: 1em;
 }
+
+.module-indicator-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 0 1em 0;
+}
+
+.module-indicator {
+  background-color: orange;
+  padding: 0.75em;
+  margin: 0 1em;
+  border-radius: 0.5em;
+  width: 450px;
+  font-weight: bold;
+}
