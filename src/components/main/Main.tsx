@@ -27,6 +27,10 @@ const Main: FC = () => {
     setIsStepper(!isStepper);
   };
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const doABtestingRedirect = () => {
     const aOrb = Math.random() >= 0.5;
     setIsStepper(aOrb);

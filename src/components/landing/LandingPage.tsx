@@ -5,6 +5,10 @@ import "./LandingPage.css";
 const { Title, Paragraph, Text } = Typography;
 
 const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="landing-page">
       <Typography className="landing-page-topo">

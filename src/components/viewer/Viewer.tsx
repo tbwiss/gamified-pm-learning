@@ -30,6 +30,10 @@ const Viewer: FC<{ onCompleted: (...args: any[]) => any }> = ({
     window.addEventListener("resize", handleResize);
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="wrap" className="viewer-warp">
       {/* <embed

@@ -19,6 +19,10 @@ const Survey: FC<{
     setHeight(tmpHeight > 1000 ? 1100 : tmpHeight);
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="wrap" className="survey-warp">
       {/* <iframe

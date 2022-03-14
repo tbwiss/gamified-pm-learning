@@ -101,6 +101,10 @@ const Stepper: FC<{ onCompleted: (...args: any[]) => any }> = ({
   const [current, setCurrent] = React.useState(0);
   const [isKnowledgeCheckDone, setIsKnowledgeCheckDone] = React.useState(false);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   document.addEventListener(
     "CheckDone",
     () => {
