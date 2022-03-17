@@ -26,7 +26,7 @@ const Survey: FC<{
   return (
     <div id="wrap" className="survey-warp">
       {/* <iframe
-        src={`https://docs.google.com/forms/d/e/1FAIpQLSdv-gsi6flW19NSOHtWJkOnXeYFCXSwPuKuXgdYqxXktsxRcA/viewform?embedded=true&entry.1931746735=${getUniqueId()}`}
+        src={`https://docs.google.com/forms/d/e/xxxxxxxxxxxxx/viewform?embedded=true&entry.1931746735=${getUniqueId()}`}
         style={{
           height,
           width,
@@ -42,7 +42,7 @@ const Survey: FC<{
         width="100%"
         height="100%"
         id="survey-frame"
-        src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__rJ3PZxUMVgwRDA4VURJVFNXV0xUMlVYUFdLRU9OMS4u&embed=true"
+        src={`https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__rJ3PZxUN0RaWE84MVU4SzBCNkxJRjRVUElMMVYzVC4u&embed=true`}
         style={{
           height,
           width,
