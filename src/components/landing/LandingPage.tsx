@@ -69,11 +69,6 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
               </li>
             </ol>
             <br />
-            The order of the versions is chosen at random.
-            <br />
-            (2) You are kindly asked to report on your experience of the two
-            different versions in a <strong>questionnaire</strong> form.
-            <br />
             <strong>
               &#x2192; Please note that this is all done on this webpage.
             </strong>
