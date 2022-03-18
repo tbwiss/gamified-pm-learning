@@ -29,7 +29,7 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             <strong>
               We expect the entire experience to last approximately 20 minutes
               for you, but our gratitude will last forever
-            </strong>{" "}
+            </strong>
             .
             <br />
             <br />
@@ -37,15 +37,10 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             <h4>This is how the test will work: </h4>
             <ol style={{ margin: 0 }}>
               <li>
-                When clicking the link, you will first be directed to a landing
-                page where you will get instructions about the test, as well as
-                a notice of consent. Of course, your participation is completely
-                anonymous and GDPR compliant.
-              </li>
-              <li>
-                Then you will be exposed to a <strong>short</strong> project
-                management training module, in both a gamified version and a
-                conventional version (slide deck converted to PDF).
+                When clicking go, you will be exposed to a{" "}
+                <strong>short</strong> project management training module, in
+                both a gamified version and a conventional version (slide deck
+                converted to PDF).
               </li>
               <li>
                 Once finished with the training, you will get a survey starting
@@ -74,6 +69,23 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             </strong>
             <br />
             <br />
+            Finally, we will attempt to connect the gamified module with an
+            actual reward, and as such{" "}
+            <strong>
+              we are donating 50 NOK to{" "}
+              <a
+                href="https://www.savethechildren.net/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Save the Children
+              </a>{" "}
+              for each <i>badge of completion</i>
+            </strong>
+            . Therefore, you will not only be contributing to science, but it is
+            also for a good cause!
+            <br />
+            <br />
             <h4>Information</h4>
             The survey responses are <strong>completely annonymous</strong> and
             in compliance with the GDPR rules.
@@ -82,21 +94,6 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
             purpose of this thesis work.
             <br />
             Participation is on a voluntary basis.
-          </Text>
-        </Paragraph>
-        <Paragraph>
-          <Text>
-            <h4>For the good cause</h4>
-            We will donate to the{" "}
-            <a
-              href="https://www.savethechildren.net/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Save the Children
-            </a>{" "}
-            fund on your behalf on completion of the survey.
-            <br />
           </Text>
         </Paragraph>
         <Paragraph>
