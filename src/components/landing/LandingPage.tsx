@@ -13,31 +13,62 @@ const LandingPage: FC<{ onGo: (...args: any[]) => any }> = ({ onGo }) => {
     <div className="landing-page">
       <Typography className="landing-page-topo">
         <Title level={3} className="landing-main-title">
-          Student survey on Project management education
+          Invitation to participate in project management education research
         </Title>
         <Paragraph>
           <Text>
-            The entire survey takes approximately 20 minutes to complete.
+            For our master thesis in the main field of study: Computer and
+            Systems Sciences (specialization: IT project management), we are
+            researching <strong>technology-based gamification</strong> as an aid
+            in <strong>upskilling project professionals</strong>.
+            <br />
+            <br />
+            As a part of this research, we are inviting you to participate in
+            this test that is designed to give us the data we need to analyze
+            this topic.{" "}
+            <strong>
+              We expect the entire experience to last approximately 20 minutes
+              for you, but our gratitude will last forever
+            </strong>{" "}
+            .
             <br />
             <br />
             <hr />
-            <h4>Procedure</h4>
-            On this webpage you will have a{" "}
-            <strong>
-              hands-on experience of a single module of an e-learning
-              curriculum.
-            </strong>
+            <h4>This is how the test will work: </h4>
+            <ol style={{ margin: 0 }}>
+              <li>
+                When clicking the link, you will first be directed to a landing
+                page where you will get instructions about the test, as well as
+                a notice of consent. Of course, your participation is completely
+                anonymous and GDPR compliant.
+              </li>
+              <li>
+                Then you will be exposed to a <strong>short</strong> project
+                management training module, in both a gamified version and a
+                conventional version (slide deck converted to PDF).
+              </li>
+              <li>
+                Once finished with the training, you will get a survey starting
+                with:
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    First: a few questions on your background and{" "}
+                    <strong>
+                      previous experience with studies in terms of delivery
+                      model
+                    </strong>
+                  </li>
+                  <li>
+                    Then: two sections covering questions on your{" "}
+                    <strong>
+                      experiences of the delivery model in the conventional and
+                      gamified version of the training.
+                    </strong>
+                  </li>
+                </ul>
+              </li>
+            </ol>
             <br />
-            (1) We will show you:
-            <ul style={{ margin: 0 }}>
-              <li>
-                a <i>conventional text-based (PDF) version</i> of the module's
-                content, and
-              </li>
-              <li>
-                a <i>gamified version</i> of the same module
-              </li>
-            </ul>
             The order of the versions is chosen at random.
             <br />
             (2) You are kindly asked to report on your experience of the two
